@@ -1,0 +1,83 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Vcsmap by melvinsh</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/github-light.css">
+    <meta name="viewport" content="width=device-width">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Vcsmap</h1>
+        <p>vcsmap is a plugin-based tool to scan public version control systems for sensitive information.</p>
+
+        <p class="view"><a href="https://github.com/melvinsh/vcsmap">View the Project on GitHub <small>melvinsh/vcsmap</small></a></p>
+
+
+        <ul>
+          <li><a href="https://github.com/melvinsh/vcsmap/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/melvinsh/vcsmap/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/melvinsh/vcsmap">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h1>
+<a id="vcsmap" class="anchor" href="#vcsmap" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>vcsmap</h1>
+
+<p><img src="https://cloud.githubusercontent.com/assets/1312973/17897353/2ec8c11a-6954-11e6-9906-4f4f0926f58d.png" alt="vcsmap screenshot"></p>
+
+<h2>
+<a id="installation" class="anchor" href="#installation" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Installation</h2>
+
+<p>Download the source code and run the following command. You need a recent version of Ruby with <a href="http://bundler.io">bundler</a> and you might need build tools like <code>gcc</code> to build the dependencies.</p>
+
+<div class="highlight highlight-source-ruby"><pre>$ bundle</pre></div>
+
+<h2>
+<a id="usage" class="anchor" href="#usage" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Usage</h2>
+
+<p>vcsmap already includes a couple of plugins. Each plugin looks for files that match a certain search query, and extracts the right data from those files. To view all plugins run:</p>
+
+<pre><code>$ ruby vcsmap.rb list
+</code></pre>
+
+<p>To use a plugin, look up the name of the plugin (<code>[plugin_name]</code>) and run the following command:</p>
+
+<pre><code>$ ruby vcsmap.rb run {plugin_name} {pages} {--no-ascii}
+</code></pre>
+
+<ul>
+<li>You need to specify the amount of pages you want to search. Each (GitHub) page has 10 possible results.</li>
+<li>Use the <code>--no-ascii</code> flag (last) to disable rendering the results as an ASCII table in the command line.</li>
+</ul>
+
+<h2>
+<a id="plugin-development" class="anchor" href="#plugin-development" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Plugin development</h2>
+
+<p>To add a new plugin, create an entry for it in <code>lib/plugin_list.rb</code> and create a new plugin class that extends <code>Vcsmap::Plugin::BasePlugin</code> in <code>lib/plugins</code>. </p>
+
+<p>Each plugin has a <code>@search_string</code> that is used to search for matching files, and a couple of regex matchers to extract the needed data. Of course you don't need to use regex, it's also possible to parse the file (e.g. with <code>JSON</code>), as long as your plugin returns a valid <code>table_header</code> and matching <code>credentials</code>.</p>
+
+<p><strong>The easiest way</strong> to develop a new plugin is to copy an simple existing one (like <code>lib/plugins/solr_dataconfig.rb</code>) and modify it until it fits your requirements.</p>
+
+<h2>
+<a id="disclaimer" class="anchor" href="#disclaimer" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>DISCLAIMER</h2>
+
+<p>Using the data obtained by this tool to gain unauthorized to access computer systems or services is <strong>ILLEGAL</strong> and therefore punisable by law. The author of this tool is <strong>not</strong> responsible for any damage caused by use/abuse of this tool.</p>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/melvinsh">melvinsh</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+    
+  </body>
+</html>
