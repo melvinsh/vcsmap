@@ -16,7 +16,7 @@ module Vcsmap
       end
 
       def table_header
-        %w(protocol client_id client_secret)
+        %w(Protocol client_id client_secret)
       end
     end
   end
