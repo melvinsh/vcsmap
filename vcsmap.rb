@@ -15,6 +15,8 @@ Dir.glob('lib/plugins/*.rb') { |f| require_relative f }
 Dir.glob('lib/providers/*.rb') { |f| require_relative f }
 
 module Vcsmap
+  VERSION = "1.0.0"
+
   cli = Vcsmap::CLI.new(ARGV)
   cli.run
 end
