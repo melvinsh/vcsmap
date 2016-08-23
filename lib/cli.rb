@@ -42,7 +42,9 @@ module Vcsmap
         abort "The plugin '#{@plugin}' has not been implemented yet."
       end
 
-      abort 'Specify a number of pages to load after the plugin name (1 = ~10 results).' unless @pages
+      unless @pages && (1..100).include?(@pages.to_i)
+        abort 'Specify a number of pages (1-100) to load after the plugin name (1 page = ~10 results).'
+      end
 
       puts 'Searching for matching files ...'
       provider = Vcsmap::Provider::GitHub.new
