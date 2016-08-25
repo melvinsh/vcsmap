@@ -17,7 +17,7 @@ vcsmap already includes a couple of plugins. Each plugin looks for files that ma
 $ ruby vcsmap.rb list
 ```
 
-To use a plugin, look up the name of the plugin (`[plugin_name]`) and run the following command:
+To use a plugin, look up the name of the plugin (`[plugin_name]`) and run the following command. Data is saved in CSV format to the `output` directory.
 ```
 $ ruby vcsmap.rb run {plugin_name} {pages} {--no-ascii}
 ```
