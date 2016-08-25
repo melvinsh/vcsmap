@@ -25,6 +25,11 @@ module Vcsmap
          title: 'Sublime Text GitHub tokens',
          description: 'Extracts GitHub tokens from the Sublime Text settings file for GitHub.',
          class_name: 'Vcsmap::Plugin::GithubSublimesettings'
+       },
+       'facebook_secrets': {
+         title: 'Facebook app secret',
+         description: 'Extracts Facebook tokens from fb_client_secrets.json.',
+         class_name: 'Vcsmap::Plugin::FacebookClientSecrets'
        }
      }
 
