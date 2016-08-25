@@ -1,9 +1,9 @@
 vcsmap
 ========
 
-![vcsmap screenshot](https://cloud.githubusercontent.com/assets/1312973/17897353/2ec8c11a-6954-11e6-9906-4f4f0926f58d.png)
-
 vcsmap is a plugin-based tool to scan public version control systems (GitHub and [possibly Gitlab soon](https://gitlab.com/gitlab-org/gitlab-ee/issues/556)) for sensitive information like access tokens and credentials. 
+
+![vcsmap screenshot](https://cloud.githubusercontent.com/assets/1312973/17897353/2ec8c11a-6954-11e6-9906-4f4f0926f58d.png)
 
 ## Installation
 Download the source code and run the following command. You need a recent version of Ruby with [bundler](http://bundler.io) and you might need build tools like `gcc` to build the dependencies.
