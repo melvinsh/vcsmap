@@ -1,0 +1,9 @@
+#!/usr/bin/env ruby
+
+# Set LOAD_PATH for development.
+$LOAD_PATH.unshift(File.dirname(File.realpath(__FILE__)) + '/../lib')
+
+require 'vcsmap'
+
+cli = Vcsmap::CLI.new(ARGV)
+cli.run

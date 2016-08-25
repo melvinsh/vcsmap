@@ -2,3 +2,4 @@
 *.swp
 !output/.gitkeep
 output/*
+*.gem
