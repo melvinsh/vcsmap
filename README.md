@@ -32,4 +32,4 @@ Each plugin has a `@search_string` that is used to search for matching files, an
 **The easiest way** to develop a new plugin is to copy an simple existing one (like `lib/plugins/solr_dataconfig.rb`) and modify it until it fits your requirements.
 
 ## DISCLAIMER
-Using the data obtained by this tool to gain unauthorized to access computer systems or services is **ILLEGAL** and therefore punisable by law. The author of this tool is **not** responsible for any damage caused by use/abuse of this tool.
+Using the data obtained by this tool to gain unauthorized to access computer systems or services is **ILLEGAL** and therefore punishable by law. The author of this tool is **not** responsible for any damage caused by use/abuse of this tool.
