@@ -1,7 +1,7 @@
 vcsmap
 ========
 
-vcsmap is a plugin-based tool to scan public version control systems (GitHub and [possibly Gitlab soon](https://gitlab.com/gitlab-org/gitlab-ee/issues/556)) for sensitive information like access tokens and credentials. 
+vcsmap is a plugin-based tool to scan public version control systems (currently GitHub and [possibly Gitlab soon](https://gitlab.com/gitlab-org/gitlab-ee/issues/556)) for sensitive information like access tokens and credentials. 
 
 ![vcsmap screenshot](https://cloud.githubusercontent.com/assets/1312973/17897353/2ec8c11a-6954-11e6-9906-4f4f0926f58d.png)
 
