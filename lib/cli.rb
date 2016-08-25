@@ -42,7 +42,7 @@ module Vcsmap
         abort "The plugin '#{@plugin}' has not been implemented yet."
       end
 
-      unless @pages && (1..100).include?(@pages.to_i)
+      unless @pages && (1..100).cover?(@pages.to_i)
         abort 'Specify a number of pages (1-100) to load after the plugin name (1 page = ~10 results).'
       end
 
@@ -54,6 +54,8 @@ module Vcsmap
 
       data = []
 
+      abort "No files were found matching the search string (#{plugin.search_string})." if results.empty?
+
       results.each do |result|
         bar.step
         file = HTTP.follow(true).get(result).body.to_s
@@ -63,6 +65,9 @@ module Vcsmap
         # this object should also be able to filter 'false' creds like localhost and default ones.
         data << credentials unless credentials[1].nil? || credentials[1].empty?
       end
+
+      abort "Some files were loaded (#{results.count}), but none of them contained matching credentials. " \
+            'You could try a higher page number.' if data.empty?
 
       bar.clear
 
