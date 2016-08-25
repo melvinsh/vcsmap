@@ -29,6 +29,7 @@ GEM
       coderay (~> 1.1.0)
       method_source (~> 0.8.1)
       slop (~> 3.4)
+    require_all (1.3.3)
     slop (3.6.0)
     tty (0.5.0)
       equatable (~> 0.5.0)
@@ -86,6 +87,7 @@ DEPENDENCIES
   http
   nokogiri
   pry
+  require_all
   tty
 
 BUNDLED WITH
