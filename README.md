@@ -12,9 +12,10 @@ $ bundle
 ```
 
 ## Usage
-vcsmap already includes a couple of plugins. Each plugin looks for files that match a certain search query, and extracts the right data from those files. To view all plugins run:
-```
-$ ruby vcsmap.rb list
+## Installation
+vcsmap is available as a Ruby gem:
+``` ruby
+$ gem install vcsmap
 ```
 
 To use a plugin, look up the name of the plugin (`[plugin_name]`) and run the following command:
