@@ -1,4 +1,4 @@
-# Notice: looks like Github patched their search ¯\_(ツ)_/¯. I'll investigate the options asap.
+## Notice: looks like Github patched their search, you need to be authenticated now `¯\_(ツ)_/¯`. I'll investigate the options.
 
 vcsmap
 ========
