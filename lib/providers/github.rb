@@ -14,14 +14,14 @@ module Vcsmap
 
       def get_cookie
         cookie = File.read('.github-cookie').strip
-        http = HTTP.cookies({user_session: cookie}).get('https://github.com/settings/profile')
-        abort "[Error] No valid session cookie in the .github-cookie file." if http.status == 302
+        http = HTTP.cookies(user_session: cookie).get('https://github.com/settings/profile')
+        abort '[Error] No valid session cookie in the .github-cookie file.' if http.status == 302
         cookie
       end
 
       def get_results_from_page(page)
         url = "https://github.com/search?p=#{page}&o=desc&q=#{@query}&s=indexed&type=Code"
-        html = HTTP.cookies({user_session: get_cookie}).get(url)
+        html = HTTP.cookies(user_session: get_cookie).get(url)
         parse_response(html.body.to_s)
       end
 

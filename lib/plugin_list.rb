@@ -1,37 +1,37 @@
 module Vcsmap
   class PluginList
-     PLUGINS = {
-       wordpress_config: {
-         title: 'Wordpress configuration files',
-         description: 'Extracts database credentials from wp-config.php.',
-         class_name: 'Vcsmap::Plugin::WordpressConfig'
-       },
-       google_oauth: {
-         title: 'Google oAuth tokens',
-         description: 'Extracts oAuth credentials from client_secrets.json.',
-         class_name: 'Vcsmap::Plugin::GoogleOauth'
-       },
-       filezilla_xml: {
-         title: 'Filezilla configuration XML',
-         description: 'Extracts FTP credentials from Filezilla configuration files.',
-         class_name: 'Vcsmap::Plugin::FilezillaXml'
-       },
-       solr_dataconfig: {
-         title: 'Solr dataConfig.xml credentials',
-         description: 'Extracts JdbcDataSource credentials from a Solor dataConfig.xml.',
-         class_name: 'Vcsmap::Plugin::SolrDataconfig'
-       },
-       sublime_github: {
-         title: 'Sublime Text GitHub tokens',
-         description: 'Extracts GitHub tokens from the Sublime Text settings file for GitHub.',
-         class_name: 'Vcsmap::Plugin::GithubSublimesettings'
-       },
-       facebook_secrets: {
-         title: 'Facebook app secret',
-         description: 'Extracts Facebook tokens from fb_client_secrets.json.',
-         class_name: 'Vcsmap::Plugin::FacebookClientSecrets'
-       }
-     }
+    PLUGINS = {
+      wordpress_config: {
+        title: 'Wordpress configuration files',
+        description: 'Extracts database credentials from wp-config.php.',
+        class_name: 'Vcsmap::Plugin::WordpressConfig'
+      },
+      google_oauth: {
+        title: 'Google oAuth tokens',
+        description: 'Extracts oAuth credentials from client_secrets.json.',
+        class_name: 'Vcsmap::Plugin::GoogleOauth'
+      },
+      filezilla_xml: {
+        title: 'Filezilla configuration XML',
+        description: 'Extracts FTP credentials from Filezilla configuration files.',
+        class_name: 'Vcsmap::Plugin::FilezillaXml'
+      },
+      solr_dataconfig: {
+        title: 'Solr dataConfig.xml credentials',
+        description: 'Extracts JdbcDataSource credentials from a Solor dataConfig.xml.',
+        class_name: 'Vcsmap::Plugin::SolrDataconfig'
+      },
+      sublime_github: {
+        title: 'Sublime Text GitHub tokens',
+        description: 'Extracts GitHub tokens from the Sublime Text settings file for GitHub.',
+        class_name: 'Vcsmap::Plugin::GithubSublimesettings'
+      },
+      facebook_secrets: {
+        title: 'Facebook app secret',
+        description: 'Extracts Facebook tokens from fb_client_secrets.json.',
+        class_name: 'Vcsmap::Plugin::FacebookClientSecrets'
+      }
+    }.freeze
 
     def self.all
       PLUGINS.sort
