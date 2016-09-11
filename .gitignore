@@ -1,3 +1,4 @@
+.github-cookie
 .DS_Store
 *.swp
 !output/.gitkeep
