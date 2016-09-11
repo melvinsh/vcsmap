@@ -1,5 +1,3 @@
-## Notice: looks like Github patched their search, you need to be authenticated now `¯\_(ツ)_/¯`. I'll investigate the options.
-
 vcsmap
 ========
 
@@ -14,6 +12,7 @@ $ bundle
 ```
 
 ## Usage
+**Due to a recent change you need to add a valid Github `user_session` cookie to `.github-cookie`.**
 vcsmap already includes a couple of plugins. Each plugin looks for files that match a certain search query, and extracts the right data from those files. To view all plugins run:
 ```
 $ ruby vcsmap.rb list
