@@ -16,7 +16,7 @@ require_all 'lib/plugins'
 require_all 'lib/providers'
 
 module Vcsmap
-  VERSION = '1.0.1'.freeze
+  VERSION = '1.0.2'.freeze
 
   cli = Vcsmap::CLI.new(ARGV)
   cli.run
