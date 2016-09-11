@@ -19,7 +19,7 @@ module Vcsmap
       def get_cookie
         cookie = File.read('.github-cookie').strip
         http = HTTP.cookies(user_session: cookie).get('https://github.com/login')
-        abort '[Error] No valid session cookie in the .github-cookie file.' unless http.status == 302
+        abort "[Error] No valid session cookie in #{Helpers::project_directory}/.github-cookie." unless http.status == 302
         cookie
       end
 

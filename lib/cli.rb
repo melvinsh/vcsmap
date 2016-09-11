@@ -23,7 +23,7 @@ module Vcsmap
     private
 
     def usage
-      'Check out README.md for instructions.'
+      "See #{Helpers::project_directory}/README.md or http://vcsmap.org for instructions."
     end
 
     def list_plugins

@@ -7,6 +7,7 @@ require 'require_all'
 
 require_relative 'lib/cli'
 require_relative 'lib/csv_writer'
+require_relative 'lib/helpers'
 require_relative 'lib/plugin'
 require_relative 'lib/plugin_list'
 require_relative 'lib/provider'

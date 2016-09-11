@@ -7,7 +7,7 @@ module Vcsmap
     end
 
     def write!
-      puts "Writing CSV to #{@file_path} ..."
+      puts "Writing CSV to #{Helpers::project_directory}/#{@file_path} ..."
       CSV.open(@file_path, 'wb', force_quotes: true) do |csv|
         csv << @header
         @data.each do |line|
