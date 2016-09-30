@@ -13,6 +13,8 @@ module Vcsmap
         @user = capture_match(@username_regex, file)
         @pass = capture_match(@password_regex, file)
         ['JDBC', @url, @user, @pass]
+      rescue NoMethodError
+        []
       end
 
       def table_header
