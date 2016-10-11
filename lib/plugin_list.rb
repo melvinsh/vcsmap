@@ -30,6 +30,11 @@ module Vcsmap
         title: 'Facebook app secret',
         description: 'Extracts Facebook tokens from fb_client_secrets.json.',
         class_name: 'Vcsmap::Plugin::FacebookClientSecrets'
+      },
+      instagram: {
+        title: 'Instagram access tokens',
+        description: 'Extracts Instagram access tokens.',
+        class_name: 'Vcsmap::Plugin::Instagram'
       }
     }.freeze
 
