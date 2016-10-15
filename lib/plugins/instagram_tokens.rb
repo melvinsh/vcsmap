@@ -1,6 +1,6 @@
 module Vcsmap
   module Plugin
-    class Instagram < Vcsmap::Plugin::BasePlugin
+    class InstagramTokens < Vcsmap::Plugin::BasePlugin
       def initialize
         @search_string = 'instagram+access_token'
         @access_token_regex = /([0-9]{9,10}\.[a-f0-9]{7}\.[a-f0-9]{31,32})/
@@ -12,7 +12,7 @@ module Vcsmap
       end
 
       def table_header
-        %w(Protocol Access Token)
+        ['Protocol', 'Access Token']
       end
     end
   end
