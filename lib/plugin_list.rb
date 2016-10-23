@@ -1,6 +1,11 @@
 module Vcsmap
   class PluginList
     PLUGINS = {
+      aws: {
+        title: 'AWS access key',
+        description: 'Extracts AWS credentials from config and credentials files.',
+        class_name: 'Vcsmap::Plugin::AwsAccessToken'
+      },
       wordpress_config: {
         title: 'Wordpress configuration files',
         description: 'Extracts database credentials from wp-config.php.',
