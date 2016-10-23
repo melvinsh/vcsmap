@@ -2,6 +2,7 @@ GEM
   remote: https://rubygems.org/
   specs:
     addressable (2.4.0)
+    ast (2.3.0)
     coderay (1.1.1)
     domain_name (0.5.20160615)
       unf (>= 0.0.5, < 1.0.0)
@@ -17,19 +18,32 @@ GEM
     http_parser.rb (0.6.0)
     method_source (0.8.2)
     mini_portile2 (2.1.0)
+    minitest (5.9.1)
     necromancer (0.3.0)
     nokogiri (1.6.8)
       mini_portile2 (~> 2.1.0)
       pkg-config (~> 1.1.7)
+    parser (2.3.1.4)
+      ast (~> 2.2)
     pastel (0.6.1)
       equatable (~> 0.5.0)
       tty-color (~> 0.3.0)
     pkg-config (1.1.7)
+    powerpack (0.1.1)
     pry (0.10.4)
       coderay (~> 1.1.0)
       method_source (~> 0.8.1)
       slop (~> 3.4)
+    rainbow (2.1.0)
+    rake (11.3.0)
     require_all (1.3.3)
+    rubocop (0.43.0)
+      parser (>= 2.3.1.1, < 3.0)
+      powerpack (~> 0.1)
+      rainbow (>= 1.99.1, < 3.0)
+      ruby-progressbar (~> 1.7)
+      unicode-display_width (~> 1.0, >= 1.0.1)
+    ruby-progressbar (1.8.1)
     slop (3.6.0)
     tty (0.5.0)
       equatable (~> 0.5.0)
@@ -75,6 +89,7 @@ GEM
     unf (0.1.4)
       unf_ext
     unf_ext (0.0.7.2)
+    unicode-display_width (1.1.1)
     unicode_utils (1.4.0)
     verse (0.4.0)
       unicode_utils (~> 1.4.0)
@@ -85,10 +100,13 @@ PLATFORMS
 
 DEPENDENCIES
   http
+  minitest
   nokogiri
   pry
+  rake
   require_all
+  rubocop
   tty
 
 BUNDLED WITH
-   1.12.5
+   1.13.6
