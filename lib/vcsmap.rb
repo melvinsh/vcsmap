@@ -26,5 +26,5 @@ require_relative 'vcsmap/plugins/wordpress_config'
 require_relative 'vcsmap/providers/github'
 
 module Vcsmap
-  VERSION = '2.0.0'.freeze
+  VERSION = '2.0.1'.freeze
 end
