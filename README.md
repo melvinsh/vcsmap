@@ -6,9 +6,9 @@ vcsmap is a plugin-based tool to scan public version control systems (currently 
 ![vcsmap screenshot](https://cloud.githubusercontent.com/assets/1312973/17968763/ddda7682-6ace-11e6-80af-557a6997276c.png)
 
 ## Installation
-Download the source code and run the following command. You need a recent version of Ruby with [bundler](http://bundler.io) and you might need build tools like `gcc` to build the dependencies.
-``` ruby
-$ bundle
+Install the package wity RubyGems.
+```
+gem install vcsmap
 ```
 
 ## Usage
@@ -19,7 +19,7 @@ $ ruby vcsmap.rb list
 
 To use a plugin, look up the name of the plugin (`[plugin_name]`) and run the following command. Data is saved in CSV format to the `output` directory.
 
-**Due to a recent change you need to add a valid Github `user_session` cookie to `.github-cookie`.**
+**To authenticate with Github you need to set a `GITHUB_COOKIE` environment variable with a valid Github `user_session` cookie value.**
 ```
 $ ruby vcsmap.rb run {plugin_name} {pages} {--no-ascii}
 ```

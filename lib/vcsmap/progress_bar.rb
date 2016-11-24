@@ -1,3 +1,5 @@
+require 'tty'
+
 module Vcsmap
   class ProgressBar
     def initialize(count)

@@ -51,6 +51,11 @@ module Vcsmap
       PLUGINS.fetch(name.to_sym)
     end
 
+    def self.get_object(name)
+      plugin = find(name)
+      Object.const_get(plugin[:class_name]).new
+    end
+
     def self.render_list
       all.each do |plugin|
         puts Pastel.new.green "[#{plugin[0]}] #{plugin[1][:title]}"

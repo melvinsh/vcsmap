@@ -1,3 +1,5 @@
+require 'csv'
+
 module Vcsmap
   class CsvWriter
     def initialize(plugin_name, plugin_header, data)
@@ -7,7 +9,7 @@ module Vcsmap
     end
 
     def write!
-      puts "Writing CSV to #{Helpers::project_directory}/#{@file_path} ..."
+      puts "Writing CSV to #{Helpers.project_directory}/#{@file_path} ..."
       CSV.open(@file_path, 'wb', force_quotes: true) do |csv|
         csv << @header
         @data.each do |line|
