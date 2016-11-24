@@ -6,22 +6,22 @@ vcsmap is a plugin-based tool to scan public version control systems (currently 
 ![vcsmap screenshot](https://cloud.githubusercontent.com/assets/1312973/17968763/ddda7682-6ace-11e6-80af-557a6997276c.png)
 
 ## Installation
-Download the source code and run the following command. You need a recent version of Ruby with [bundler](http://bundler.io) and you might need build tools like `gcc` to build the dependencies.
-``` ruby
-$ bundle
+Install the package wity RubyGems.
+```
+$ gem install vcsmap
 ```
 
 ## Usage
 vcsmap already includes a couple of plugins. Each plugin looks for files that match a certain search query, and extracts the right data from those files. To view all plugins run:
 ```
-$ ruby vcsmap.rb list
+$ vcsmap list
 ```
 
 To use a plugin, look up the name of the plugin (`[plugin_name]`) and run the following command. Data is saved in CSV format to the `output` directory.
 
-**Due to a recent change you need to add a valid Github `user_session` cookie to `.github-cookie`.**
+**To authenticate with Github you need to set a `GITHUB_COOKIE` environment variable with a valid Github `user_session` cookie value.**
 ```
-$ ruby vcsmap.rb run {plugin_name} {pages} {--no-ascii}
+$ vcsmap run {plugin_name} {pages} {--no-ascii}
 ```
 - You need to specify the amount of pages you want to search. Each (GitHub) page has 10 possible results.
 - Use the `--no-ascii` flag (last) to disable rendering the results as an ASCII table in the command line.

@@ -1,3 +1,5 @@
+require 'tty'
+
 module Vcsmap
   class CLI
     def initialize(arguments)
@@ -23,7 +25,7 @@ module Vcsmap
     private
 
     def usage
-      "See #{Helpers::project_directory}/README.md or http://vcsmap.org for instructions."
+      "See http://vcsmap.org or open #{Helpers.project_directory}/README.md for instructions."
     end
 
     def list_plugins
@@ -34,8 +36,7 @@ module Vcsmap
 
     def run_plugin(no_ascii)
       begin
-        plugin = PluginList.find(@plugin)
-        plugin = Object.const_get(plugin[:class_name]).new
+        plugin = PluginList.get_object(@plugin)
       rescue KeyError
         abort "Cannot find plugin with name '#{@plugin}'."
       rescue NameError
@@ -66,8 +67,10 @@ module Vcsmap
         data << credentials unless credentials[1].nil? || credentials[1].empty?
       end
 
-      abort "Some files were loaded (#{results.count}), but none of them contained matching credentials. " \
-            'You could try a higher page number.' if data.empty?
+      if data.empty?
+        abort "Some files were loaded (#{results.count}), but none of them contained matching credentials. " \
+              'You could try a higher page number.'
+      end
 
       bar.clear
 
